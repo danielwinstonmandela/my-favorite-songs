@@ -93,31 +93,15 @@ aside {
     box-shadow: 0 2px 8px rgba(18,18,18,0.10);
     border: 2px solid #1db954;
     min-width: 260px;
+    transition: box-shadow 0.2s, transform 0.2s;
 }
-    @media (max-width: 900px) {
-        main {
-            flex-direction: column;
-            align-items: center;
-            padding: 0 8px;
-        }
-        .song-card {
-            max-width: 98vw;
-            height: auto;
-            flex-direction: column;
-            align-items: center;
-            margin: 16px 0;
-        }
-        .album-cover {
-            width: 100%;
-            height: 180px;
-            border-radius: 12px 12px 0 0;
-            margin-bottom: 0;
-        }
-        .song-details-container {
-            padding: 16px;
-            align-items: center;
-        }
-    }
+
+aside:hover {
+    box-shadow: 0 4px 16px rgba(29,185,84,0.25);
+    transform: translateY(-4px) scale(1.02);
+}
+
+
 .profile-photo {
     width: 180px;
     height: 180px;
@@ -193,8 +177,9 @@ footer p {
     transition: color 0.2s;
     font-family: 'Circular', Helvetica Neue, Helvetica, Arial, sans-serif;
 }
-/* Responsive Design */
-@media (max-width: 900px) {
+
+
+@media (max-width: 1200px) {
     main {
         flex-direction: column;
         align-items: center;
@@ -203,11 +188,13 @@ footer p {
     .songs {
         max-width: 100vw;
         flex-basis: 100%;
+        padding: 16px 0;
     }
     aside {
         max-width: 100vw;
         flex-basis: 100%;
         margin: 16px 0;
+        min-width: 0;
     }
     .song-card {
         max-width: 98vw;
@@ -228,7 +215,7 @@ footer p {
     }
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
     header {
         font-size: 1.1rem;
         padding: 20px 0 10px 0;
